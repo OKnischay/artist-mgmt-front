@@ -34,23 +34,7 @@ export function LoginForm() {
   });
 
   const onSubmit = async (values: z.infer<typeof LoginFormSchema>) => {
-  //   try {
-  //     const response = await login(values);
-      
-  //     if (!response?.id) {
-  //       throw new Error("Invalid response from server");
-  //     }
-  
-  //     localStorage.setItem("access_token", response.access_token);
-  //     localStorage.setItem("refresh_token", response.refresh_token);
-      
-  //     toast.success("Login successful");
-  //     router.replace("/dashboard");
-  //   } catch (error) {
-  //     console.error("Login error:", error);
-  //     toast.error("Something went wrong. Please try again.");
-  //   }
-  // };
+
 
   try {
     setIsLoading(true);
@@ -128,7 +112,7 @@ export function LoginForm() {
           </Button>
           <p className="mt-4 text-center text-sm text-gray-600">
             Don't have an account?{" "}
-            <Link href="/register" className="text-blue-600 hover:text-blue-500 underline">
+            <Link href="/signup" className="text-blue-600 hover:text-blue-500 underline">
               Sign up
             </Link>
           </p>
